@@ -8,4 +8,10 @@ export default defineNuxtConfig({
   imports: {
     dirs: ["stores"],
   },
+  // hybrid rendering mode 根據路由選擇要渲染的模式 預設是ssr:true
+  routeRules: {
+    "/spa": { ssr: false },
+    "/static": { static: true },
+    "/swr": { swr: true },
+  },
 });
