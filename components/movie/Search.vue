@@ -3,7 +3,7 @@ const query = ref("batman");
 const movies = ref([]);
 async function search() {
   const { Search } = await $fetch(
-    `http://www.omdbapi.com/?apikey=1df33a80&s=${query.value}`
+    `https://www.omdbapi.com/?apikey=1df33a80&s=${query.value}`
   );
   movies.value = Search;
 }
