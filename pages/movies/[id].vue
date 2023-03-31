@@ -6,7 +6,7 @@
 const route = useRoute();
 definePageMeta({});
 const { data } = await useFetch(
-  `http://www.omdbapi.com/?apikey=1df33a80&i=${route.params.id}`,
+  `https://www.omdbapi.com/?apikey=1df33a80&i=${route.params.id}`,
   {
     pick: ["Title", "Error"],
     key: `/movies/${route.params.id}`,
